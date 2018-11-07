@@ -117,7 +117,7 @@
 
 (defn- cookies-response
   [request response]
-  (if (= false (opt request :decode-cookies))
+  (if (false? (opt request :decode-cookies))
     response
     (decode-cookie-header response)))
 
